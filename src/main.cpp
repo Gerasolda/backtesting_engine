@@ -3,6 +3,7 @@
 #include "market_event.hpp"
 #include "order.hpp"
 #include "order_book.hpp"
+#include "execution_engine.hpp"
 
 
 
@@ -11,12 +12,16 @@ using namespace std;
 std::vector<MarketEvent> load_data();
 
 int main() {
+    Position pos;
 
-    OrderBook book;
-    book.addOrder({1, Side::Buy, 2, 3});
-    book.addOrder({2, Side::Sell, 3, 5});
-    std::cout << book.size() << " ";
-    book.cancelOrder(1);
-    std::cout << book.size();
+    Order buy{1, Side::Buy, 100, 5};
+    Order sell{2, Side::Sell, 101, 2};
+
+    execute(buy, pos);
+    execute(sell, pos);
+
+    std::cout << pos.inventory << '\n';
+
+
 
 }

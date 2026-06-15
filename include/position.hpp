@@ -1,8 +1,5 @@
-//
-// Created by Дилара on 15.06.2026.
-//
+#pragma once
 
-#ifndef BACKTESTING_ENGINE_POSITION_HPP
-#define BACKTESTING_ENGINE_POSITION_HPP
-
-#endif //BACKTESTING_ENGINE_POSITION_HPP
+struct Position {
+    int inventory = 0;
+};

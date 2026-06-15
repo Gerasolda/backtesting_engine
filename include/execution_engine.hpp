@@ -1,8 +1,12 @@
-//
-// Created by Дилара on 15.06.2026.
-//
+#pragma once
 
-#ifndef BACKTESTING_ENGINE_EXECUTION_ENGINE_HPP
-#define BACKTESTING_ENGINE_EXECUTION_ENGINE_HPP
+#include "order.hpp"
+#include "market_event.hpp"
+#include "position.hpp"
 
-#endif //BACKTESTING_ENGINE_EXECUTION_ENGINE_HPP
+bool shouldExecute (
+    const Order& order,
+    const MarketEvent& event
+);
+
+void execute(const Order& order, Position& pos);
