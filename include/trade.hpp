@@ -1,0 +1,8 @@
+//
+// Created by Дилара on 16.06.2026.
+//
+
+#ifndef BACKTESTING_ENGINE_TRADE_HPP
+#define BACKTESTING_ENGINE_TRADE_HPP
+
+#endif //BACKTESTING_ENGINE_TRADE_HPP
